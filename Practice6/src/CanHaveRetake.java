@@ -1,0 +1,3 @@
+interface CanHaveRetake {
+    void gotRetake();
+}
