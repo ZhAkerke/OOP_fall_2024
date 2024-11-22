@@ -1,0 +1,34 @@
+package problem_4;
+
+import java.util.Date;
+
+class Employee extends Person implements Comparable<Employee>, Clonable {
+   public Date hireData;
+   public int salary;
+   public String insuranceNumber;
+
+   public Employee(String name, int salary, Date hireData, String insuranceNumber) {
+       super(name);
+       this.salary = salary;
+       this.hireData = hireData;
+       this.insuranceNumber = insuranceNumber;
+   }
+
+   public int getSalary() {
+       return salary;
+   }
+   public void setSalary(int salary) {
+       this.salary = salary;
+   }
+   public String getInsuranceNumber() {
+       return insuranceNumber;
+   }
+   public void setInsuranceNumber(String insuranceNumber) {
+       this.insuranceNumber = insuranceNumber;
+   }
+
+   @Override
+   public int compareTo(Employee other) {
+       return Int.Compare(this.salary, other.salary);
+   }
+}
